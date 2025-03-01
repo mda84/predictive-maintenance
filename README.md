@@ -140,7 +140,9 @@ The FastAPI app logs predictions and response times to a database (configured vi
 
 ## Collaboration & CI/CD
 Version Control: Use Git for tracking changes.
+
 CI/CD: Set up GitHub Actions (or your preferred CI/CD tool) to run tests and build Docker images on code commits.
+
 Documentation: This README and inline code comments document the project structure and usage, facilitating collaboration among data scientists, engineers, and product teams.
 
 ## Research and Experimentation
