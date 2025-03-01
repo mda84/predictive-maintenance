@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maintenance-api-deployment
+  labels:
+    app: maintenance-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: maintenance-api
+  template:
+    metadata:
+      labels:
+        app: maintenance-api
+    spec:
+      containers:
+      - name: maintenance-api
+        image: yourdockerhubusername/maintenance-api:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://user:password@postgres-service:5432/maintenance_db"
+        - name: API_KEY
+          value: "secret-key"
